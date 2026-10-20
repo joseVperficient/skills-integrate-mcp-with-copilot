@@ -15,6 +15,26 @@
     <main>
       <section id="activities-container">
         <h3>Available Activities</h3>
+        <div class="activity-controls">
+          <div class="control-group search-control">
+            <label for="activity-search">Search activities</label>
+            <input type="search" id="activity-search" placeholder="Name, description, or schedule" />
+          </div>
+          <div class="control-group">
+            <label for="activity-category">Category</label>
+            <select id="activity-category">
+              <option value="">All categories</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <label for="activity-sort">Sort by</label>
+            <select id="activity-sort">
+              <option value="default">Default order</option>
+              <option value="name">Name (A-Z)</option>
+              <option value="time">Start time</option>
+            </select>
+          </div>
+        </div>
         <div id="activities-list">
           <!-- Activities will be loaded here -->
           <p>Loading activities...</p>

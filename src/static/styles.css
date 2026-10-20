@@ -57,6 +57,37 @@ section h3 {
   color: #1a237e;
 }
 
+.activity-controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.search-control {
+  grid-column: 1 / -1;
+}
+
+.control-group {
+  min-width: 0;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.control-group input,
+.control-group select {
+  width: 100%;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
 .activity-card {
   margin-bottom: 15px;
   padding: 15px;
@@ -190,6 +221,21 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+.empty-state {
+  color: #666;
+  padding: 12px 0;
+}
+
+@media (max-width: 480px) {
+  .activity-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .search-control {
+    grid-column: auto;
+  }
 }
 
 footer {
